@@ -10,8 +10,13 @@
 #Float (Any number with Decimal points, Example ki -3.90, 4.5)
 #Boolean (True, False)
 #Declare a Variable and Assign the value and convert it into integer and print the type of value and value?
+#Declare a Variable and Assign the value and convert it into FLOAT and print the type of value and value?
 
 Value = input()
+Val = input()
 Value = int(Value)
+Val= float(Val)
 print(Value)
 print(type(Value))
+print(Val)
+print(type(Val))
