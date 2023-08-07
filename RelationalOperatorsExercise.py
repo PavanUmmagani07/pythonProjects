@@ -38,7 +38,7 @@ print(A!=B)
 #A >= B is False
 A = int(input())
 B = int(input())
-Result = A>=B
+Result = (A>=B)
 print("A >= B is "+Result)
 
 
@@ -50,5 +50,5 @@ print("A >= B is "+Result)
 #A >= B is True
 A = float(input())
 B = float(input())
-Result = A<=B
+Result = (A<=B)
 print("A <= B is "+Result)
