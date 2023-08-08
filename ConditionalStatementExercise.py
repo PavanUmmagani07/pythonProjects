@@ -118,9 +118,9 @@ else:
 #sample Input2:small,200
 #Expected output1:Buy a Book
 #Expected output2: Do Not Buy a Book
-A = str(input())
-B = int(input())
-if(A=="large") or (C>=300):
+Size = str(input())
+Count= int(input())
+if(Size=="large") or (Count>=300):
     print("Buy a Book")
 else:
     print("Do Not Buy a Book")
