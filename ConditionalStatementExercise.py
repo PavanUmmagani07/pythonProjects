@@ -170,3 +170,90 @@ elif(A>0):
     print("Positive")
 else:
     print("Negative")
+
+
+"""
+Write a program that reads the three angles A ,B,C of a triangle and checks if the sum of the three angles of the triangle is equal to 180
+Print the triangle as shown below if the sum of the three angles of the triangle is equal to 180.otherwise print 'Not a Valid Triangle'
+*
+**
+*
+"""
+#Sample Input1:60,45,75
+#Sample Input2:80,90,100
+#Expected Output1: *
+#                  **
+#                  *
+#Expected Output2: Not a Valid Triangle
+Angle1 = int(input())
+Angle2 = int(input())
+Angle3 = int(input())
+Sum = Angle1+Angle2+Angle3
+if(Sum==180):
+    print("\n" "\n" "**")
+else:
+    print("Not a Valid Triangle")
+
+"""
+Write a Program that reads a number and checks if N is greater than 10)
+Print the Result of N+5, if N is greater than 10. otherwise, print the result of N+1
+#Sample Input1:3
+#Sample Input2:63
+#Expected Output1:4
+#Expected Output2:68
+"""
+Num = int(input())
+if(Num>10):
+    print(Num+5)
+else:
+    print(Num+1)
+
+"""
+Write a program that reads three numbers A,B and C and checks if each number is greater than 100
+Print "All are greater than 100" if each number is greater than 100.Otherwise,Print "Not all are greater than 100"
+#Sample Input1:100,150,1162
+#Sample Input2:120,50,1
+#Expected Output1:All are greater than 100
+#Expected Output2: Not all are greater than 100
+"""
+Num1 =int(input())
+Num2 =int(input())
+Num3 =int(input())
+if (Num1>100) and (Num2>100) and (Num3>100):
+    print("All are greater than 100")
+else:
+    print("Not all are greater than 100")
+
+print("""
+Write a program that reads a room number and checks if the Number in the given Room Number is less than 30
+The Room Numbers are in format of R1,R35,etc)
+print Ground Floor if the Number is lessthan 30.Otherwise,Print Not Ground Floor
+#Sample Input1:R27
+#Sample Input2:R452
+#Expected Output1:Ground Floor
+#Expected Output2:Not Ground Floor
+"""
+Room_Num = input()
+Num = Room_Num[1:] #Since room number are in the form of R27,R452, this returns the room number expect R
+Num=int(Num) #converted the obtained String into Integer since we cannot relate > or < with Strings
+if(Num<30):
+    print("Ground Floor")
+else:
+    print("Not Ground Floor")
+
+
+"""
+Write a program that reads three Numbers A,B and C, and Checks if the difference between any two numbers(A-B,B-C and C-A) is always lessthan 25
+Print Difference is lessthan 25 if the difference between any two numbers(A-B,B-C and C-A) is always Lessthan 25>otherwise,Print Difference is not lessthan 25
+#Sample Input1:65,60,52
+#Sample Input2:100,70,35
+#Expected Output1:Difference is less than 25
+#Expected Output2:Difference is not less than 25
+"""
+A = int(input())
+B = int(input())
+C = int(input())
+if((A-B<25) and (B-C<25) and (C-A<25)):
+    print("Difference is less than 25")
+else:
+    print("Difference is not less than 25")
