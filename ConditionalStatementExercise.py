@@ -224,7 +224,7 @@ if (Num1>100) and (Num2>100) and (Num3>100):
 else:
     print("Not all are greater than 100")
 
-print("""
+"""
 Write a program that reads a room number and checks if the Number in the given Room Number is less than 30
 The Room Numbers are in format of R1,R35,etc)
 print Ground Floor if the Number is lessthan 30.Otherwise,Print Not Ground Floor
