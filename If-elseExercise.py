@@ -338,12 +338,10 @@ Write a program that reads an employee's salary and years of service and decides
 #Expected Output1:No Bonus
 #Expected Output2:2500
 """
-
 Salary = int(input())
 Years_of_service = int(input())
-Bonus = Salary*5/1000
 if(Years_of_service>5):
-    print(Bonus)
+    print((Salary)*5/100)
 else:
     print("No Bonus")
 
