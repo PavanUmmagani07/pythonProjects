@@ -233,6 +233,7 @@ print Ground Floor if the Number is lessthan 30.Otherwise,Print Not Ground Floor
 #Expected Output1:Ground Floor
 #Expected Output2:Not Ground Floor
 """
+
 Room_Num = input()
 Num = Room_Num[1:] #Since room number are in the form of R27,R452, this returns the room number expect R
 Num=int(Num) #converted the obtained String into Integer since we cannot relate > or < with Strings
@@ -250,6 +251,7 @@ Print Difference is lessthan 25 if the difference between any two numbers(A-B,B-
 #Expected Output1:Difference is less than 25
 #Expected Output2:Difference is not less than 25
 """
+
 A = int(input())
 B = int(input())
 C = int(input())
@@ -257,3 +259,113 @@ if((A-B<25) and (B-C<25) and (C-A<25)):
     print("Difference is less than 25")
 else:
     print("Difference is not less than 25")
+
+"""
+Write a program that reads three sides A,B,and C of a triangle and checks if the sum of any two sides of the triangle is always greater than the third side
+print "It's a Triangle" if the sum of any two sides of the triangle is always greater than the third side.Otherwise,print it's not a triangle)
+#Sample Input1:4,5,3
+#Sample Input2:6,3,2
+#Expected Output1:It's a Triangle
+#Expected Output2:It's not a Triangle
+"""
+A = int(input())
+B = int(input())
+C = int(input())
+if((A+B>C) and (B+C>A) and (C+A>B)):
+    print("It's a Triangle")
+else:
+    print("It's not a Triangle")
+
+"""
+Write a program that reads a string and checks if the lenght of S is between 2 and 7 or the first character of S is not equal to "a")
+Print Valid String if the length of S is between 2  and 7 or the frist character of String S is not equal to "a".Otherwise,print Not a Valid String)
+#Sample Input1: apple
+#Sample Input2:atlantic
+#Sample Input3:out
+#Expected Output1:Valid String
+#Expected Output2:Not a Valid String
+#Exoected Output3:Valid String
+"""
+
+String = input()
+Length_of_String = len(String)
+if((2<Length_of_String<7) or (String[0]!="a")):
+    print("Valid String")
+else:
+    print("Not a Valid String")
+
+"""
+Write a program that reads two numbers A and B and checks if any of the given number is between 40 and 140.
+print Between 40 and 140:Yes if any of the given numbers is between 40 and 140.Otherwise, print Between 40and 140:No
+#Sample Input1:12,100
+#Sample Input2:33,4
+#Expected Output1:Between 40 and 140: Yes
+#Expected Output2:Between 40 and 140: No
+"""
+A = int(input())
+B = int(input())
+if((40<A<140)or(40<B<140)):
+    print("Between 40 and 140: Yes")
+else:
+    print("Between 40 and 140: No")
+
+"""
+Write a program that reads numbers A and B, and checks if one of the below conditions is satisfied
+#1 one of A and B is lessthan 20.
+#2 The sum of A and B is between 30 and 50.
+print the sum of A and B if one of the given conditions is satisfied. otherwise, print A and B on each line.
+#Sample Input1:45,7
+#Sample Input2:30,100
+#Expected Output1:52
+#Expected Output2:30,100
+"""
+
+A = int(input())
+B = int(input())
+Sum = A+B
+if((A<20) or (B <20)) or (30<Sum<50)):
+    print(Sum)
+else:
+    print(A)
+    print(B)
+
+
+"""
+A company decided to give a bonus of 5% to an employee if his/her years of service is more than five years.
+Write a program that reads an employee's salary and years of service and decides whether the employeee gets the bonous or not.
+#Sample Input1:25000,3
+#Sample Input2:50000,3
+#Expected Output1:No Bonus
+#Expected Output2:2500
+"""
+
+Salary = int(input())
+Years_of_service = int(input())
+Bonus = Salary*5/1000
+if(Years_of_service>5):
+    print(Bonus)
+else:
+    print("No Bonus")
+
+
+"""
+Write a program that reads two numbers A and B and checks if one of the below conditions is satisfied.
+#1 one of A and B is equal to 6
+#2 The sum of A and B is equal to 6
+#3 The difference between A and b is equal to 6.
+print Lucky if one of the given conditions is satisfied. Otherwise, Print Not Lucky 
+#Sample Input1:4,10
+#Sample Input2:3,2
+#Expected Output1:Lucky
+#Expected Output2:Not Lucky
+"""
+
+A = int(input())
+B = int(input())
+is_equal_to_6 = (A==6) or (B==6)
+Sum_equal_to_6 = (A+B==6)
+Difference_equal_to_6 = (A-B==6) or (B-A==6)
+if((is_equal_to_6) or (Sum_equal_to_6)or (Difference_equal_to_6)):
+    print("Lucky")
+else:
+    print("Not Lucky")
