@@ -323,7 +323,7 @@ print the sum of A and B if one of the given conditions is satisfied. otherwise,
 A = int(input())
 B = int(input())
 Sum = A+B
-if((A<20) or (B <20)) or (30<Sum<50)):
+if((A<20) or (B <20)) or (30<Sum<50):
     print(Sum)
 else:
     print(A)
