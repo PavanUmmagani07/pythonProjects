@@ -194,3 +194,12 @@ elif((Marks>=60) and(Marks<=70)):
     print("C")
 else:
     print("F")
+
+
+
+"""
+#Sample Input1:
+#Sample Input2:
+#Expected Output1:
+#Expected Output2:
+"""
