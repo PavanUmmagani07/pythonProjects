@@ -469,3 +469,139 @@ counter=1
 while(counter<=N):
     print((str(counter)+" ")*counter)
     counter+=1
+
+"""
+Write a program that reads two numbers M and N, and prints a Rectangle of M rows and N columns using the numbers from 1 as shown in the sample output.
+#Sample Input1:5,4
+#Sample Input2:2,3
+#Expected Output1:1 1 1 1
+                  2 2 2 2
+                  3 3 3 3 
+                  4 4 4 4 
+                  5 5 5 5
+#Expected Output2:1 1 1
+                  2 2 2
+"""
+M = int(input())
+N = int(input())
+counter = 1
+while(counter<=M):
+    print((str(counter)+" ")*N)
+    counter+=1
+
+"""
+Write a program that reads a number N and print N numbers starting from 0
+#Sample Input1:2
+#Sample Input2:5
+#Expected Output1:0
+                  1
+#Expected Output2:0
+                  1
+                  2
+                  3
+                  4
+"""
+N = int(input())
+counter = 0
+while(counter<N):
+    print(counter)
+    counter+=1
+
+"""
+Given a number N, write a program that reads N inputs and prints the average of N inputs
+#Sample Input1:5,3,6,2,8,1
+#Sample Input2:2,2,3
+#Expected Output1:4.0
+#Expected Output2:2.5
+"""
+N = int(input())
+Sum = 0
+counter = 0
+while(counter<N):
+    M = int(input())
+    Sum = Sum+M
+    counter+=1
+print(Sum/N)
+
+"""
+Write a program that reads two numbers X and N and prints the product of N numbers after X.
+#Sample Input1:4,2
+#Sample Input2:10,5
+#Expected Output1:30
+#Expected Output2:360360
+(REFER TO PYTHON ASSIGMENT-7 'Product of N numbers after X')
+"""
+X = int(input())
+N = int(input())
+Counter = 1
+Product =1
+while(Counter<=N):
+    X = X+1
+    Product = Product*X
+    Counter+=1
+print(Product)
+
+"""
+Write a program that reads a number N and prints the sum of squares of N numbers starting from 1.
+#Sample Input1:4
+#Sample Input2:7
+#Expected Output1:30
+#Expected Output2:140
+"""
+N = int(input())
+Counter=1
+Sum = 0
+while(Counter<=N):
+    Squares = Counter**2
+    Sum = Sum+Squares
+    Counter+=1
+print(Sum)
+
+
+"""
+Write a program that reads a number N and prints two Right Angled Triangles of N rows, using numbers starting from 1
+#Sample Input1:3
+#Sample Input2:4
+#Expected Output1:1
+                  22
+                  333
+                  1
+                  22
+                  333
+#Expected Output2:1
+                  22
+                  333
+                  1
+                  22
+                  333
+"""
+N = int(input())
+Counter = 1
+while(Counter<=2):
+    i = 1
+    while(i<=N):
+        print(str(i)*i)
+        i+=1
+    Counter+=1
+
+
+"""
+Write a program that reads a numbers N and Prints a Right Angled Triangle of N rows using stars(*) and Pluses(+)
+#Sample Input1:4
+#Sample Input2:3
+#Expected Output1:*
+                  * *
+                  * * *
+                  + + + +
+#Expected Output2:*
+                  * *
+                  + + +
+"""
+N = int(input())
+Counter = 1
+while(Counter<=N):
+    if(Counter==N):
+        print("+ "*Counter)
+    else:
+        print("* "+Counter)
+    Counter+=1
