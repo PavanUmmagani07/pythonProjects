@@ -365,3 +365,190 @@ N = int(input())
 for i in range(2):
     for j in range(1,(N+1)):
         print(str(j)*j)
+
+
+"""
+Write a program that reads two numbers M and N, and prints a Rectangle of M rows and N columns using numbers
+#Sample Input1:2,3
+#Sample Input2:5,4
+#Expected Output1:1 1 1
+                  2 2 2
+#Expected Output2:1 1 1 1
+                  2 2 2 2
+                  3 3 3 3
+                  4 4 4 4
+                  5 5 5 5
+"""
+M = int(input())
+N = int(input())
+for i in range(M):
+    print(str(i)*i)
+
+"""
+Write a program that reads two numbers M and N,and prints a Rectangle of M rows and N columns using numbers
+#Sample Input1:2,3
+#Sample Input2:5,4
+#Expected Output1:1 1 1
+                  2 2 2
+#Expected Output2:1 1 1 1
+                  2 2 2 2
+                  3 3 3 3
+                  4 4 4 4
+                  5 5 5 5
+"""
+M = int(input())
+N = int(input())
+for i in range(1,(M+1)):
+    print((str(i)+" ")*N)
+
+"""
+Write a program to print the sum of the squares of the first N natural numbers
+#Sample Input1:6
+#Sample Input2:3
+#Expected Output1:91
+#Expected Output2:14
+"""
+N = int(input())
+Sum = 0
+for i in range(1,(N+1)):
+    Square = i**2
+    Sum =Sum+Square
+print(Sum)
+
+"""
+You are given an integer N as input. Write aa program to print integers from N to 1
+#Sample Input1:5
+#Sample Input2:3
+#Expected Output1:5
+                  4
+                  3
+                  2
+                  1
+#Expected Output2:3
+                  2
+                  1
+"""
+N = int(input())
+for i in range(N):
+    print(N)
+    N-=1
+
+"""
+Write a program to print a rectangle pattern of M rows and N columns using the plus cgaracter(+)
+#Sample Input1:3,5
+#Sample Input2:4,4
+#Expected Output1:+ + + + +
+                  + + + + +
+                  + + + + +
+
+#Expected Output2:+ + + +
+                  + + + +
+                  + + + +
+                  + + + +
+"""
+M = int(input())
+N= int(input())
+for i in range(M):
+    print("+ "*N)
+
+"""
+Given an integer number N as input. Write a program to print the double triangular pattern of N lines using an Asterisk(*) character as shown below
+#Sample Input1:4
+#Sample Input2:5
+#Expected Output1:*
+                  * *
+                  * * *
+                  * * * *
+                  *
+                  * *
+                  * * *
+                  * * * *
+#Expected Output2:*
+                  * *
+                  * * *
+                  * * * *
+                  * * * * *
+                  *
+                  * *
+                  * * *
+                  * * * *
+                  * * * * *
+"""
+N = int(input())
+for i in range(2):
+    for j in range(1,(N+1)):
+        print("* "*j)
+
+"""
+Write a program that reads a number N and prints the number from 0 to N
+#Sample Input1:4
+#Sample Input2:5
+#Expected Output1:0
+                  1
+                  2
+                  3
+                  4
+#Expected Output2:0
+                  1
+                  2
+                  3
+                  4
+                  5
+"""
+N = int(input())
+for i in range(N+1):
+    print(i)
+
+"""
+Given a number N,write a program that reads N inputs and prints the average pf the given N inputs
+#Sample Input1:4,3,4,6,7
+#Sample Input2:2,24,15
+#Expected Output1:5.0
+#Expected Output2:19.5
+"""
+
+N = int(input())
+Sum = 0
+for i in range(N):
+    M = int(input())
+    Sum = Sum+M
+print(Sum/N)
+
+"""
+Write a program that reads a number, and prints two Right Angled triangels of N rows using starts(*)
+#Sample Input1:4
+#Sample Input2:3
+#Expected Output1:*
+                  * *
+                  * * *
+                  * * * *
+                  *
+                  * *
+                  * * *
+                  * * * *
+#Expected Output2:*
+                  * *
+                  * * *
+                  *
+                  * * 
+                  * * *
+"""
+N = int(input())
+for i in range(2):
+    for j in range(1,(N+1)):
+        print("* "*j)
+
+"""
+Write a program that reads two numbers M and N, and prints the product of numbers from M to N
+#Sample Input1:5,7
+#Sample Input2:9,14
+#Expected Output1:210
+#Expected Output2:2162160
+"""
+M = int(input())
+N = int(input())
+product = 1
+for i in range(M,(N+1)):
+    product = product*M
+    M =M+1
+print(product)
