@@ -499,7 +499,7 @@ N = int(input())
 T = int(input())
 Sum = 0
 for i in range(M,(N+1)):
-    if(i%T==0)
+    if(i%T==0):
         Sum = Sum+i
 print(Sum)
 
@@ -533,3 +533,38 @@ while (i<(N+1)):
     if((i%2==0) and(i%3==0)):
         print(i)
     i+=1
+
+
+"""
+Write a program that reads two numbers and prints the sum of the kth power of all the numbers from 1 to N
+#Sample Input1:5,3
+#Sample Input2:2,8
+#Expected Output1:225
+#Expected Output2:257
+"""
+
+N = int(input())
+K = int(input())
+Sum = 0
+for i in range(1,(N+1)):
+    Kth_power = i**K
+    Sum =Sum+Kth_power
+print(Sum)
+
+#While Loop
+N = int(input())
+K = int(input())
+Sum = 0
+i = 1
+while(i<(N+1)):
+    Kth_power = i**K
+    Sum = Sum+Kth_power
+print(Sum)
+
+"""
+Given an integer N, and exponent M as input, Write a program to calculate N power M without using the power operator(**)
+#Sample Input1:2,3
+#Sample Input2:3,1
+#Expected Output1:8
+#Expected Output2:3
+"""
