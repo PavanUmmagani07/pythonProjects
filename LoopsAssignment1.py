@@ -394,11 +394,142 @@ while(i<(N+1)):
     print("* "*N)
     N=N-1
 
+"""
+Write a program that reads a number N and prints an inverted Right angled Triangle of N rows using Numbers 
+#Sample Input1:4
+#Sample Input2:3
+#Expected Output1:4 4 4 4
+                  3 3 3
+                  2 2 
+                  1
+#Expected Output2:3 3 3
+                  2 2 
+                  1
+"""
+N = int(input())
+for i in range(0,N):
+    print("* "*N)
+    N =  N-1
+
+#While Loop
+N = int(input())
+i = 0
+j = N
+while (i<(N+1)):
+    print((str("j ")+" ")*j)
+    j = j-1
+    i+=1
+
+
 
 """
-
-#Sample Input1:
-#Sample Input2:
-#Expected Output1:
-#Expected Output2:
+Write a program that reads two numbers N and T,and Prints all the numbers from 1 to N that are divisible by T
+#Sample Input1:10,3
+#Sample Input2:3,6,9
+#Expected Output1:21,5
+#Expected Output2:5,10,15,20
 """
+N = int(input())
+T = int(input())
+for i in range(1,(N+1)):
+    if(i%T==0):
+        print(i)
+
+#While Loop
+N = int(input())
+T = int(input())
+i = 1
+while i<(N+1):
+    if(i%T==0):
+        print(i)
+    i+=1
+
+"""
+Write a program that reads two numbers M and N, and prints the numbers from N to M.
+#Sample Input1:2,5
+#Sample Input2:3,10
+#Expected Output1:5,4,3,2
+#Expected Output2:10,9,8,7,6,5,4,3
+"""
+M = int(input())
+N = int(input())
+for i in range(M,(N+1)):
+    print(N)
+    N = N-1
+
+#While Loop
+M = int(input())
+N = int(input())
+j = N
+while(i<(N+1)):
+    print(j)
+    j = j-1
+    i+=1
+
+
+"""
+Write a program that reads a number N and prints the number from N to 1
+#Sample Input1:5
+#Sample Input2:3
+#Expected Output1:5,4,3,2,1
+#Expected Output2:3,2,1
+"""
+N = int(input())
+for i in range(N):
+    print(N)
+    N = N-1
+
+#While Loop
+N = int(input())
+i = 0
+while(i<N):
+    print(N)
+    N = N-1
+
+
+"""
+Given three integers, write a program to print the sum of the numbers divisibile by the given number T from M to N
+#Sample Input1:2,5,9
+#Sample Input2:10,20,200
+#Expected Output1:14
+#Expected Output2:2090
+"""
+M = int(input())
+N = int(input())
+T = int(input())
+Sum = 0
+for i in range(M,(N+1)):
+    if(i%T==0)
+        Sum = Sum+i
+print(Sum)
+
+#While Loop
+M = int(input())
+N = int(input())
+T = int(input())
+Sum = 0
+i = M
+while (i<(N+1)):
+    if(i%T==0):
+        Sum = Sum+i
+print(Sum)
+
+"""
+Write a program that reads a number N and prints all the numbers from 1 to N that are divisibile by both 2 and 3
+#Sample Input1:15
+#Sample Input2:6,12
+#Expected Output1:9
+#Expected Output2:6
+"""
+N = int(input())
+for i in range(1,N+1):
+    if((i%2==0) and(i%3==0)):
+        print(i)
+
+#While Loop
+N = int(input())
+i = 1
+while (i<(N+1)):
+    if((i%2==0) and(i%3==0)):
+        print(i)
+    i+=1
