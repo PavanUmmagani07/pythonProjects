@@ -261,3 +261,141 @@ while(i<(N+1)):
     if(i%2==1):
         print(i)
     i+=1
+
+
+"""
+Write a program that reads two numbers M and N and prints odd numbers from M to N separated by a space
+#Sample Input1:5,10
+#Sample Input2:9,21
+#Expected Output1:5 7 9
+#Expected Output2:9 11 13 15 17 19 21
+"""
+M = int(input())
+N = int(input())
+for i in range(M,(N+1)):
+    if(i%2==1):
+        print(i,end=" ")
+
+#WhileLoop
+M = int(input())
+N = int(input())
+i = M
+while(i<(N+1)):
+    if(i%2==1):
+        print(i,end=" ")
+    i+=1
+
+"""
+Write a program that reads two numbers M and N, and prints the sum of squares of numbers from M to N
+#Sample Input1:2,4
+#Sample Input2:3,8
+#Expected Output1:29
+#Expected Output2:199
+"""
+M = int(input())
+N = int(input())
+Sum = 0
+for i in range(M,(N+1)):
+    squares = i**2
+    Sum = Sum+squares
+print(Sum)
+
+#While Loop
+M = int(input())
+N = int(input())
+i = M
+Sum = 0
+while(i<(N+1)):
+    squares = i**2
+    Sum = Sum+squares
+    i+=1
+print(Sum)
+
+"""
+Write a program that reads two numbers M and N, and prints the product of odd numbers from M to N
+#Sample Input1:2,7
+#Sample Input2:4,8
+#Expected Output1:105
+#Expected Output2:35
+"""
+
+M = int(input())
+N = int(input())
+K = 1
+for i in range(M,(N+1)):
+    if(i%2==1):
+        K = K*i
+print(K)
+
+#While Loop
+M = int(input())
+N = int(input())
+K = 1
+i = M
+while(i<(N+1)):
+    if(i%2==1):
+        K = K*i
+    i+=1
+print(K)
+
+"""
+Given three integers, write a program to print the sum pf the numbers divisibile by the given number T from M to N
+#Sample Input1:2,5,9
+#Sample Input2:10,20,200
+#Expected Output1:14
+#Expected Output2:2090
+"""
+T = int(input())
+M = int(input())
+N = int(input())
+Sum = 0
+for i in range(M,(N+1)):
+    if(i%T==0):
+        Sum = Sum+i
+print(Sum)
+
+#While Loop
+T = int(input())
+M = int(input())
+N = int(input())
+Sum = 0
+i = M
+while(i<(N+1)):
+    if(i%T==0):
+        Sum = Sum+i
+    i+=1
+print(Sum)
+
+"""
+Write a program that reads a number N and prints an Inverted Right Angled Triangle pf N rows using stars(*)
+#Sample Input1:5
+#Sample Input2:3
+#Expected Output1:* * * * *
+                  * * * *
+                  * * *
+                  * *
+                  *
+#Expected Output2:* * *
+                  * *
+                  *
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    print("* "*N)
+    N = N-1
+
+#While Loop
+N = int(input())
+i = 1
+while(i<(N+1)):
+    print("* "*N)
+    N=N-1
+
+
+"""
+
+#Sample Input1:
+#Sample Input2:
+#Expected Output1:
+#Expected Output2:
+"""
