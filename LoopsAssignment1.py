@@ -185,6 +185,7 @@ for i in range(M,(N+1)):
     if(i%2==0):
         Sum = Sum+i
 print(Sum)
+
 #While Loop
 M = int(input())
 N = int(input())
@@ -210,6 +211,7 @@ for i in range(M,(N+1)):
     if(i%2==1):
         Sum = Sum+i
 print(Sum)
+
 #While Loop
 M = int(input())
 N = int(input())
@@ -234,6 +236,7 @@ for i in range(1,(N+1)):
     if(i%2==0):
         print(i)
 
+#WhileLoop
 N = int(input())
 i = 1
 while(i<(N+1)):
