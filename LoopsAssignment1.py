@@ -407,8 +407,8 @@ Write a program that reads a number N and prints an inverted Right angled Triang
                   1
 """
 N = int(input())
-for i in range(0,N):
-    print("* "*N)
+for i in range(1,(N+1)):
+    print((str(i)+" ")*N)
     N =  N-1
 
 #While Loop
@@ -568,3 +568,227 @@ Given an integer N, and exponent M as input, Write a program to calculate N powe
 #Expected Output1:8
 #Expected Output2:3
 """
+N = int(input())
+M = int(input())
+K = 1
+i = 0
+for i in range(M):
+    K = K*N
+print(K)
+
+#While Loop
+N = int(input())
+M = int(input())
+K = 1
+i = 0
+while(i<M):
+    K = K*N
+    i+=1
+print(K)
+
+
+"""
+Given two integers M, N. Write a program to print the product of numbers in the range M and N(inclusive of M and N)
+#Sample Input1:2,5
+#Sample Input2:1,4
+#Expected Output1:120
+#Expected Output2:24
+"""
+M = int(input())
+N = int(input())
+K = 1
+for i in range(M,(N+1)):
+    K = K*i
+print(K)
+
+#While Loop
+M = int(input())
+N = int(input())
+i = M
+K = 1
+while(i<(N+1)):
+    K = K*i
+print(K)
+
+"""
+Write a program that reads two numbers M and N and finds the products of the numbers from M to N that are divisible by 3
+Print the product of the numbers from M to N that are divisible by 3. if there are no numbers that are divisible by 3 from M to N. otherwise print 1
+#Sample Input1:2,7
+#Sample Input2:12,14
+#sample Input3 = 1,2
+#Expected Output1:18
+#Expected Output2:12
+#Expected Output: 1
+"""
+M = int(input())
+N = int(input())
+K = 1
+for i in range(M,(N+1)):
+    if(i%3==0):
+        K = K*i
+print(K)
+
+"""
+Write a program that reads a number n and prints an Inverted Right Angled Triangle of N rows using stars(*) and pluses(+)
+#Sample Input1:4
+#Sample Input2:6
+#Expected Output1:* * * *
+                  + + +
+                  + +
+                  +
+#Expected Output2:* * * * * *
+                  + + + + +
+                  + + + + 
+                  + + +
+                  + +
+                  +
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    if(i!=N):
+        print("+ "*i)
+    else:
+        print("* "*N)
+    N = N-1
+
+
+"""
+Write a program that reads a number N and prints the count of numbers from 1 to N that are divisible by both 6 and 8
+#Sample Input1:50
+#Sample Input2:175
+#Expected Output1:2
+#Expected Output2:7
+"""
+N = int(input())
+count = 0
+for i in range(1,(N+1)):
+    if((i%6==0) and (i%8==0)):
+        count+=i
+print(count)
+
+#While Loop
+N = int(input())
+count = 0
+i = 1
+while (i<(N+1)):
+    if((i%6==0) and(i%8==0)):
+        count+=1
+        i+=1
+print(count)
+
+"""
+Write a program that reads two numbers N and T and prints the count of numbers from 1 to N that are divisible by T
+#Sample Input1:12,3
+#Sample Input2:4
+#Expected Output1:25,5
+#Expected Output2:5
+"""
+N = int(input())
+T = int(input())
+count = 0
+for  i in range(1,(N+1)):
+    if(i%T==0):
+        count+=1
+print(count)
+
+#While Loop
+N = int(input())
+T = int(input())
+count = 0
+i =1
+while (i<(N+1)):
+    if(i%T==0):
+        count+=1
+    i+=1
+print(count)
+
+"""
+Write a program that reads a number N and prints the count of numbers from 1 to N that are divisible by both 2 and 3
+#Sample Input1:12
+#Sample Input2:21
+#Expected Output1:2
+#Expected Output2:3
+"""
+N = int(input())
+count = 0
+for i in range(1,(N+1)):
+    if((i%2==0) and(i%3==0)):
+        count+=1
+print(count)
+
+#While Loop
+N = int(input())
+count = 0
+i = 1
+while(i<(N+1)):
+    if((i%2==0) and(i%3==0)):
+        count+=1
+    i+=1
+print(count)
+
+"""
+Write a program that reads a string and prints the a and Z characters in the string
+#Sample Input1:zigzag
+#Sample Input2:zap
+#Expected Output1:z,z,a
+#Expected Output2:z,a
+"""
+Word = input()
+for i in Word:
+    if((i=="a") and(i=="z")):
+        print(i)
+
+
+"""
+Write a program that reads a string and prints the vowels in the string
+#Sample Input1:indian
+#Sample Input2:i,i,a
+#Expected Output1:nxtwave
+#Expected Output2:a,e
+"""
+Word = input()
+for i in Word:
+    if((i=='a') or (i=='e') or(i=='i') or(i=='o') or(i=='u')):
+        print(i)
+
+
+"""
+Write a program that reads a string and prints the count of vowels in the string
+#Sample Input1:code
+#Sample Input2:developer
+#Expected Output1:2
+#Expected Output2:4
+"""
+Word = input()
+count = 0
+for i in Word:
+    if ((i == 'a') or (i == 'e') or (i == 'i') or (i == 'o') or (i == 'u')):
+        count+=1
+print(count)
+
+
+"""
+Write a program that reads a string and prints the character of a string in reverse order
+#Sample Input1:scale
+#Sample Input2:Metrics
+#Expected Output1:elacs
+#Expected Output2:scirteM
+"""
+Word = input()
+Word = reversed(Word)
+for i in Word:
+    print(i)
+
+
+"""
+Write a program that reads two numbers M and N, and prints the odd numbers from N to M separated by a space
+#Sample Input1:1,10
+#Sample Input2:5,15
+#Expected Output1:9 7 5 3 1
+#Expected Output2:15 13 11 9 7 5
+"""
+M = int(input())
+N = int(input())
+for i in range(N,(M-1),-1):
+    if(i%2!=0):
+        print(i,end=" ")
