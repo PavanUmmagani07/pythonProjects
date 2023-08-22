@@ -6,17 +6,17 @@ Write a program to print the multiplication table of the given number(N) up to t
 #Expected Output2:10 table
 """
 N = int(input())
-for i in range(1,11):
+for i in range(1, 11):
     table = str(N)+"x"+str(i)+"="+str(N*i)
     print(table)
 
 #While Loop
 N = int(input())
 i = 1
-while(i<11):
+while i < 11:
     table = str(N)+"x"+str(i)+"="+str(N*i)
     print(table)
-    i+=1
+    i += 1
 
 """
 Write a program to print the reverse of the given string
@@ -39,8 +39,8 @@ Given a string S, Write a program to find the vowels in the given string S.
 """
 Word = input()
 for i in Word:
-    if((i=="a")or(i=="e")or(i=="i")or(i=="o")or(i=="u")):
-        print(i,end="")
+    if ((i=="a") or (i=="e") or (i=="i") or (i=="o") or (i=="u")):
+        print(i, end="")
 
 
 """
@@ -209,8 +209,142 @@ Otherwise,Print the numbers from M to N that are divisible by 6 separated bya sp
 """
 M = int(input())
 N = int(input())
+result = "No Numbers Found"
 for i in range(M,(N+1)):
     if(i%6==0):
-        print(i)
+        result = [i]
+print(result)
+
+
+
+"""
+Given a string write a program to find the count of Vowels in the string.
+Print String has more than two vowels if the count of vowels is greater than 2. Other wise,print String doesn't have more than two vowels
+#Sample Input1:indian
+#Sample Input2:code
+#Expected Output1:String has more than two vowels
+#Expected Output2:String doesn't have more than two vowels
+"""
+String = input()
+Count = 0
+for i in String:
+    if((i=='a')or(i=='e')or(i=='i')or(i=='o')or(i=='u')):
+        Count+=1
+if(Count>2):
+    print("String has more than two vowels")
+
 else:
-    print("No Numbers Found")
+    print("String doesn't have more than two vowels")
+
+
+"""
+Given a number N, write a program that checks if N is not divisible by any number from 2 to 9.
+Print Divisible Number if the number N is divisible by any of the numbers from 2 to 9.
+Print Indivisible Number if the number N is not divisible by any number from 2 to 9
+#Sample Input1:15
+#Sample Input2:103
+#Expected Output1:Divisible Number
+#Expected Output2:Indivisible Number
+"""
+N = int(input())
+result = "Indivisible Number"
+for i in range(2,10):
+    if(N%i==0):
+        print("Divisible Number")
+print(result)
+
+"""
+Given a number N, write a program to print the N terms in the given series, each on a new line
+series:
+2, 22, 222, 2222, 22222,.......N terms
+#Sample Input1:6
+#Sample Input2:3
+#Expected Output1:2
+                  22
+                  222
+                  2222
+                  22222
+                  222222
+#Expected Output2:2
+                  22
+                  222
+"""
+N = int(input())
+term_num = '2'
+for i in range(1,(N+1)):
+    term = term_num*i
+    print(term)
+
+#While Loop
+N = int(input())
+term_num= '2'
+i =1
+while(i<(N+1)):
+    term = term_num*i
+    print(term)
+    i+=1
+
+
+"""
+Given an integer N, Write a program to print the sum of N terms in the given series
+series:
+2, 22, 222, 2222,.......N terms
+#Sample Input1:3
+#Sample Input2:8
+#Expected Output1:246
+#Expected Output2:24691356
+"""
+N = int(input())
+term_num = '2'
+Sum = 0
+for i in range(1,(N+1)):
+    term = term_num*i
+    Sum = Sum+int(term)
+print(Sum)
+
+#While Loop
+N = int(input())
+term_num = '2'
+i = 1
+Sum = 0
+while(i<(N+1)):
+    term = term_num*i
+    Sum = Sum+int(term)
+print(Sum)
+
+"""
+Given an integer N, write a program to print the sum of N terms in the given series.
+Series:
+1, 11, 111,....N terms
+#Sample Input1:4
+#Sample Input2:5
+#Expected Output1:1234
+#Expected Output2:12345
+"""
+N = int(input())
+term_num = '1'
+sum = 0
+for i in range(1,(N+1)):
+    term = term_num*i
+    sum = sum+int(term)
+print(sum)
+
+#While Loop
+N = int(input())
+term_num = '1'
+i = 1
+sum = 0
+while(i<(N+1)):
+    term = term_num*i
+    sum = sum+int(term)
+    i+=1
+print(sum)
+
+"""
+Given two numbers X and N, Write a program to print the sum of N terms in the given series.
+Series:(X)^2, (XX)^2, (XXX)^2,........N terms
+#Sample Input1:4,3
+#Sample Input2:7,4
+#Expected Output1:199088
+#Expected Output2:61091436
+"""
