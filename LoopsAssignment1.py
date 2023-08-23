@@ -644,13 +644,39 @@ Write a program that reads a number n and prints an Inverted Right Angled Triang
                   +
 """
 N = int(input())
-for i in range(1,(N+1)):
-    if(i!=N):
-        print("+ "*i)
+for i in range(N,0,-1):
+    if(i==N):
+        print("+ "*N)
     else:
-        print("* "*N)
-    N = N-1
+        print("* "*i)
 
+"""
+Write a program that reads number N and prints a Right angled Triangle of N rows and an inverted Right angled Triangle of N rows using stars(*)
+#Sample Input1:3
+#Sample Input2:5
+#Expected Output1:*
+                  * *
+                  * * *
+                  * * *
+                  * *
+                  *
+                  
+#Expected Output2:*
+                  * *
+                  * * *
+                  * * * *
+                  * * * * *
+                  * * * * *
+                  * * * *
+                  * * *
+                  * *
+                  *
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    print("* "*i)
+for i in range(N,0,-1):
+    print("* "*i)
 
 """
 Write a program that reads a number N and prints the count of numbers from 1 to N that are divisible by both 6 and 8
