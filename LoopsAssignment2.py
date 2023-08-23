@@ -493,5 +493,92 @@ while(i<(N+1)):
 print(Sum)
 
 
+"""
+Given two numbers X and N, Wrie a program to print the sum of N terms in the given series
+Series: X^1, X^3, X^5.....N terms
+#Sample Input1:2,6
+#Sample Input2:5,3
+#Expected Output1:2730
+#Expected Output2:3255
+"""
+term_X = int(input())
+N = int(input())
+Sum_of_series = 0
+for i in range(1,N+1):
+        term = term_X**((2*i)-1)
+        Sum_of_series = Sum_of_series+term
+print(Sum_of_series)
 
+#While Loop
+term_X = int(input())
+N = int(input())
+Sum_of_series = 0
+i = 1
+while(i<(N+1)):
+    term = term_X**((2*i)-1)
+    Sum_of_series = Sum_of_series+term
+    i+=1
+print(Sum_of_series)
+"""
+Given two numbers X and N, Write a program to print the sum of N terms in the given series
+Series: X^2, X^4, X^6.....N terms
+#Sample Input1:3,4
+#Sample Input2:-2,6
+#Expected Output1:7380
+#Expected Output2:5460
+"""
 
+term_X = int(input())
+N = int(input())
+Sum_of_series = 0
+for i in range(1,N+1):
+        term = term_X**(2*i)
+        Sum_of_series = Sum_of_series+term
+print(Sum_of_series)
+
+#While Loop
+term_X = int(input())
+N = int(input())
+Sum_of_series = 0
+i = 1
+while(i<(N+1)):
+    term = term_X**(2*i)
+    Sum_of_series = Sum_of_series+term
+    i+=1
+print(Sum_of_series)
+
+"""
+Given two numbers X and N, Write a program to print the sum of N terms in the given series
+Series: X^2, -X^4, X^6, -X^8.....N terms
+#Sample Input1:2,6
+#Sample Input2:-7,3
+#Expected Output1:-3276
+#Expected Output2:115297
+"""
+term_X = int(input())
+N = int(input())
+Sum_of_series = 0
+for i in range(1,N+1):
+    power = 2*i
+    if(power%4==0):
+        term =-(term_X**power)
+    else:
+        term = term_X**power
+    Sum_of_series = Sum_of_series+term
+print(Sum_of_series)
+
+#While Loop
+term_X = int(input())
+N = int(input())
+i = 1
+Sum_of_series = 0
+while(i<(N+1)):
+    power = 2*i
+    if(power%4==0):
+        term = -(term_X**power)
+        Sum_of_series= Sum_of_series+term
+    else:
+        term = term_X**power
+        Sum_of_series= Sum_of_series+term
+    i+=1
+print(Sum_of_series)
