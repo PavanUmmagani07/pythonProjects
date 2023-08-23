@@ -212,9 +212,106 @@ N = int(input())
 result = "No Numbers Found"
 for i in range(M,(N+1)):
     if(i%6==0):
-        result = [i]
-print(result)
+        result = i
+        if type(result)!=str:
+            print(result)
+if type(result)==str:
+    print(result)
+#Method2
+n = int(input())
+m = int(input())
+count = 0
+numbers_divisible_by_6 = ""
+for i in range(m,(n+1)):
+    if i%6==0:
+        numbers_divisible_by_6 = numbers_divisible_by_6+str(i)+" "
+        count+=1
+if count==0:
+    print("No Numbers Found")
+else:
+    print(numbers_divisible_by_6)
+#While Loop
+M = int(input())
+N = int(input())
+i = M
+result = "No Numbers Found"
+while(i<(N+1)):
+    if(i%6==0):
+        result = i
+        if type(result)!=str:
+            print(result)
+    i+=1
+if type(result)==str:
+    print(result)
 
+
+"""
+Given two numbers M and N, Write a program to find the count of the numbers from M to N that are divisible by 9.
+Print 'No Numbers Found' if the count of numbers from M to N that are divisible by 9 is 0.
+otherwise, print the numbers from M to N separated bya space that are divisible by 9.
+#Sample Input1:5,25
+#Sample Input2:3,8
+#Expected Output1:9 18
+#Expected Output2:No Numbers Found
+"""
+M = int(input())
+N = int(input())
+count = 0
+numbers_divisible_by_9 = ""
+for i  in range(M,(N+1)):
+    if(i%9==0):
+        numbers_divisible_by_9 = numbers_divisible_by_9+str(i)+" "
+        count+=1
+if(count!=0):
+    print(numbers_divisible_by_9)
+else:
+    print("No Numbers Found")
+
+
+#While Loop
+M = int(input())
+N = int(input())
+i = M
+count = 0
+numbers_divisible_by_9=""
+while(i<(N+1)):
+    if(i%9==0):
+        numbers_divisible_by_9 = numbers_divisible_by_9+str(i)+" "
+        count+=1
+    i+=1
+if(count!=0):
+    print(numbers_divisible_by_9)
+else:
+    print("No Numbers Found")
+
+
+"""
+Given two numbers M and N, write a program to print the count of the total numbers of digits from M to N.
+#Sample Input1:4,13
+#Sample Input2:5,8
+#Expected Output1:14
+#Expected Output2:4
+"""
+
+M = int(input())
+N = int(input())
+count = 0
+for i in range(M,(N+1)):
+    i = str(i)
+    count = count+len(i)
+print(count)
+
+
+#While Loop
+M = int(input())
+N = int(input())
+count = 0
+i = M
+while(i<(N+1)):
+    i = str(i)
+    count = count+len(i)
+    i= int(i)+1
+print(count)
 
 
 """
@@ -342,9 +439,59 @@ print(sum)
 
 """
 Given two numbers X and N, Write a program to print the sum of N terms in the given series.
+Series: X,XX,XXX,.....N terms
+#Sample Input1:7,4
+#Sample Input2:6,2
+#Expected Output1:8638
+#Expected Output2:72
+"""
+term_X = input()
+N = int(input())
+Sum = 0
+for i in range(1,(N+1)):
+    term = term_X*i
+    Sum = Sum+int(term)
+print(Sum)
+
+#While Loop
+term_X = input()
+N = int(input())
+Sum = 0
+i = 1
+while(i<(N+1)):
+    term = term_X*i
+    Sum = Sum+int(term)
+print(Sum)
+
+"""
+Given two numbers X and N, Write a program to print the sum of N terms in the given series.
 Series:(X)^2, (XX)^2, (XXX)^2,........N terms
 #Sample Input1:4,3
 #Sample Input2:7,4
 #Expected Output1:199088
 #Expected Output2:61091436
 """
+term_X = input()
+N = int(input())
+Sum = 0
+for i in range(1,(N+1)):
+    term = term_X*i
+    squares_of_terms = int(term)**2
+    Sum = Sum+squares_of_terms
+print(Sum)
+
+#While Loop
+term_X = input()
+N = int(input())
+Sum = 0
+i = 1
+while(i<(N+1)):
+    term = term_X*i
+    squares_of_terms = int(term)**2
+    Sum = Sum+squares_of_terms
+    i+=1
+print(Sum)
+
+
+
+
