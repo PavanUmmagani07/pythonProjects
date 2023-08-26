@@ -1,5 +1,5 @@
 """
-Write a program to print sstars in Nrows and N columns, Where interger N is given as an input.
+Write a program to print stars in N rows and N columns, Where integer N is given as an input.
 #Sample Input1:4
 #Sample Input2:2
 #Expected Output1:* * * *
