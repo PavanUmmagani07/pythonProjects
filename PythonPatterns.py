@@ -483,3 +483,202 @@ i = 1
 while(i<(N+1)):
     print((N-i)*" "+"*"*i)
     i+=1
+
+
+"""
+Given a number N, write a program to print the Right Angled Triangle of N rows using (*)
+#Sample Input1:4
+#Sample Input2:3
+#Expected Output1:      *
+                      * *
+                    * * *
+                  * * * *
+#Expected Output2:    *
+                    * *
+                  * * * 
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    print((N-i)*"  "+"* "*i)
+
+#While Loop
+N = int(input())
+i = 1
+while(i<(N+1)):
+    print((N-i)*"  "+"* "*i)
+    i+=1
+
+
+
+"""
+Given a  number N, write a program to print the Right Angled Triangle of N rows using stars (*) and hashes(#)
+#Sample Input1:4
+#Sample Input2:3
+#Expected Output1:    *
+                     **
+                    ***
+                   ####
+#Expected Output2:  *
+                   **
+                  ###
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    if(i==N):
+        print((N-i)*" "+"#"*i)
+    else:
+        print((N-i)*" "+"*"*i)
+
+#While Loop
+N = int(input())
+i = 1
+while(i<(N+1)):
+    if(i==N):
+        print((N-i)*" "+"#"*i)
+    else:
+        print((N-i)*" "+"*"*i)
+    i+=1
+
+
+"""
+Given a number N, write a program to print a pyramid of N rows using stars(*)
+#Sample Input1:4
+#Sample Input2:5
+#Expected Output1:
+      *       
+    * * *     
+  * * * * *   
+* * * * * * * 
+#Expected Output2:
+        *         
+      * * *       
+    * * * * *     
+  * * * * * * *   
+* * * * * * * * *
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    left_spaces = (N-i)*" "
+    left_strs = "* "*i
+    right_strs = "* "*(i-1)
+    print(left_spaces+left_strs+right_strs+left_spaces)
+
+
+#while Loop
+N = int(input())
+i = 1
+while(i<(N+1)):
+    left_spaces = (N-i)*" "
+    left_strs = "* "*i
+    right_strs = "* "*(i-1)
+    print(left_spaces+left_strs+right_strs+left_spaces)
+    i+=1
+
+
+"""
+Given a number N, write a program to print a pyramid of N rows using numbers
+#Sample Input1:5
+#Sample Input2:3
+#Expected Output1:
+        1 
+      2 2 2 
+    3 3 3 3 3 
+  4 4 4 4 4 4 4 
+5 5 5 5 5 5 5 5 5
+#Expected Output2:
+    1 
+  2 2 2 
+3 3 3 3 3
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    left_spaces = (N-i)*"  "
+    left_nums = (str(i)+" ")*i
+    right_nums = (str(i)+" ")*(i-1)
+    print(left_spaces+left_nums+right_nums)
+
+#While Loop
+N = int(input())
+i = 1
+while(i<(N+1)):
+    left_spaces = (N-i)*"  "
+    left_nums = (str(i)+" ")*i
+    right_nums = (str(i)+" ")*(i-1)
+    print(left_spaces+left_nums+right_nums)
+    i+=1
+
+"""
+Given a number N, write a program to print an inverted Right angled triangle of N rows using numbers 
+#Sample Input1:3
+#Sample Input2:6
+#Expected Output1:
+333
+ 22
+  1
+  
+
+#Expected Output2:
+666666
+ 55555
+  4444
+   333
+    22
+     1
+"""
+N = int(input())
+for i in range(N):
+    left_spaces = i*"  "
+    left_nums = str(N)*(N)
+    print(left_spaces+left_nums)
+    N=N-1
+
+#While Loop
+N = int(input())
+i=0
+while(i<N):
+    left_spaces = i*" "
+    left_nums = str(N-i)*(N-i)
+    print(left_spaces+left_nums)
+    i+=1
+
+"""
+Given a number N, write a program to print an inverted Right angled triangle of N rows using numbers 
+#Sample Input1:3
+#Sample Input2:6
+#Expected Output1:
+3 3 3
+  2 2
+    1
+
+#Expected Output2:
+6 6 6 6 6 6
+  5 5 5 5 5
+    4 4 4 4
+      3 3 3
+        2 2
+          1
+"""
+N = int(input())
+for i in range(N):
+    left_spaces = i * "  "
+    left_nums = (str(N)+" ") * (N)
+    print(left_spaces + left_nums)
+    N = N - 1
+
+# While Loop
+N = int(input())
+i = 0
+while (i < N):
+    left_spaces = i * " "
+    left_nums = (str(N - i)+" ") * (N - i)
+    print(left_spaces + left_nums)
+    i += 14
+
+
+"""
+Given a number N, write a program to print an Inverted Pyramid of N rows using stars(*)
+#Sample Input1:4
+#Sample Input2:9
+#Expected Output1:
+#Expected Output2:
+"""
