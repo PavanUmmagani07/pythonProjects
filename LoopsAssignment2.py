@@ -20,7 +20,7 @@ while i < 11:
 
 """
 Write a program to print the reverse of the given string
-#Sample Input1:Huuray! we have won the match.
+#Sample Input1:Huray! we have won the match.
 #Sample Input2:Competitive Programming
 #Expected Output1:.hctam eht now evah eW !yarruH
 #Expected Output2:gnimmargorP evititepmoC
@@ -171,7 +171,7 @@ Write a program to check whether the given number is a perfect number or not.
 A number is considered as a perfect number if sum of all factors excluding itself is equal to the number.  
 #Sample Input1:6
 #Sample Input2:21
-#Expected Output1:Perfect Nummber
+#Expected Output1:Perfect Number
 #Expected Output2:Not a Perfect Number
 """
 N = int(input())
@@ -582,3 +582,74 @@ while(i<(N+1)):
         Sum_of_series= Sum_of_series+term
     i+=1
 print(Sum_of_series)
+
+
+"""
+Write a program that reads the number N and finds the count of digits from 1 to N
+#Sample Input1:10
+#Sample Input2:4
+#Expected Output1:11
+#Expected Output2:4
+"""
+N = int(input())
+count = 0
+for i in range(1,(N+1)):
+    i = str(i)
+    count = count+len(i)
+print(count)
+
+#While Loop
+N = int(input())
+i = 1
+count = 0
+while(i<(N+1)):
+    count=count+len(str(i))
+print(count)
+
+"""
+Given two numbers X and N, Write a program to print the sum of N terms in the given series
+Series: X, -X^3, X^5, -X^7, -X^9,.....N terms
+#Sample Input1:2,5
+#Sample Input2:3,2
+#Expected Output1:410
+#Expected Output2:-24
+"""
+term_X = input()
+N = int(input())
+Sum_of_terms = 0
+K = 1
+for i in range(1,(N+1)):
+    term = K*(term_X**(2*i+1))
+    Sum_of_series = Sum_of_series+term
+    K = K-1
+print(Sum_of_series)
+"""
+Given a number N, Write a program to find the count of factors of N.
+#Sample Input1:6
+#Sample Input2:13
+#Expected Output1:Number has more than 2 factors
+#Expected Output2:Number doesn't have more than 2 factors
+"""
+N = int(input())
+count = 0
+for i in range(1,(N+1)):
+    if(N%i==0):
+        count= count+1
+if(count>2):
+    print("Number has more than 2 factors")
+else:
+    print("Number doesn't have more than 2 factors")
+
+#While Loop
+N = int(input())
+count = 0
+i = 1
+while(i<(N+1)):
+    if(N%i==0):
+        count = count+1
+    i+=1
+
+if(count>2):
+    print("Number has more than 2 factors")
+else:
+    print("Number doesn't have more than 2 factors")
