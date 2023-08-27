@@ -680,5 +680,316 @@ Given a number N, write a program to print an Inverted Pyramid of N rows using s
 #Sample Input1:4
 #Sample Input2:9
 #Expected Output1:
+* * * * * * * 
+  * * * * * 
+    * * * 
+      *
 #Expected Output2:
+* * * * * * * * * * * * * * * * * 
+  * * * * * * * * * * * * * * * 
+    * * * * * * * * * * * * * 
+      * * * * * * * * * * * 
+        * * * * * * * * * 
+          * * * * * * * 
+            * * * * * 
+              * * * 
+                * 
 """
+N = int(input())
+for i in range(N):
+    left_spaces =i*"  "
+    left_strs = "* "*(N-i)
+    right_strs = (N-(i+1))*"* "
+    print(left_spaces+left_strs+right_strs)
+
+
+#While Loop
+N = int(input())
+i = 0
+while(i<N):
+    left_spaces =i*"  "
+    left_strs = "* "*(N-i)
+    right_strs = (N-(i+1))*"* "
+    print(left_spaces+left_strs+right_strs)
+    i+=1
+
+"""
+Given a number N, write a program to print an inverted pyramid of N rows using stars(*) and pluses(+)
+#Sample Input1:5
+#Sample Input2:4
+#Expected Output1:
++ + + + + 
+ * * * * 
+  * * * 
+   * * 
+    * 
+#Expected Output2:
++ + + + 
+ * * * 
+  * * 
+   * 
+"""
+N = int(input())
+print("+ "*N)
+for i in range(1,N):
+    spaces = i*" "
+    strs = (N-i)*"* "
+    print(spaces+strs)
+
+#While Loop
+N = int(input())
+print("+ "*N)
+i = 1
+while(i<N):
+    spaces = i*" "
+    strs = (N-i)*"* "
+    print(spaces+strs)
+    i+=1
+
+"""
+Given a number N, write a program to print the letter M of N rows with two Soild Right Angled Triangles of N rows using stars(*)
+#Sample Input1:6
+#Sample Input2:4
+#Expected Output1:
+*                     * 
+* *                 * * 
+* * *             * * * 
+* * * *         * * * * 
+* * * * *     * * * * * 
+* * * * * * * * * * * *
+#Expected Output2:
+*             * 
+* *         * * 
+* * *     * * * 
+* * * * * * * * 
+"""
+N = int(input())
+for i in range(1,(N+1)):
+        left_Triangle = i*"* "
+        mid_spaces = (2*(N-i))*"  "
+        right_Triangle = i*"* "
+        print(left_Triangle+mid_spaces+right_Triangle)
+
+#WHile Loop
+N = int(input())
+i = 1
+while(i<(N+1)):
+    left_Triangle = i * "* "
+    mid_spaces = (2 * (N - i)) * "  "
+    right_Triangle = i * "* "
+    print(left_Triangle + mid_spaces + right_Triangle)
+    i+=1
+
+"""
+Given a number N, write a program to print the ketter M of N rows with two solid pyramids using stars(*)
+#Sample Input1:4
+#Sample Input2:5
+#Expected Output1:
+   *       * 
+  * *     * * 
+ * * *   * * * 
+* * * * * * * * 
+#Expected Output2:
+    *         * 
+   * *       * * 
+  * * *     * * * 
+ * * * *   * * * * 
+* * * * * * * * * *
+"""
+
+N = int(input())
+for i in range(1,(N+1)):
+    left_spaces = (N-i)*" "
+    first_triangle = i*"* "
+    mid_spaces = (2*(N-i))*" "
+    second_triangle = i*"* "
+    print(left_spaces+first_triangle+mid_spaces+second_triangle)
+
+#While Loop
+N = int(input())
+i = 1
+while(i<(N+1)):
+    left_spaces = (N-i)*" "
+    first_triangle = i*"* "
+    mid_spaces = (2*(N-i))*" "
+    second_triangle = i*"* "
+    print(left_spaces+first_triangle+mid_spaces+second_triangle)
+    i+=1
+
+"""
+Given a number N, write a program to print a pyramid of 2*N-1 rows using stars(*)
+#Sample Input1:3
+#Sample Input2:6
+#Expected Output1:
+* 
+* * 
+* * * 
+* * 
+* 
+
+#Expected Output2:
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    print(i*"* ")
+for j in range(1,N):
+    print(N*"* ")
+    N=N-1
+
+
+"""
+Given a number N, write a program to print a pyramid of 2*N-1 rows using numbers
+#Sample Input1:5
+#Sample Input2:6
+#Expected Output1:
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5 
+4 4 4 4 
+3 3 3 
+2 2 
+1 
+#Expected Output2:
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5 
+6 6 6 6 6 6 
+5 5 5 5 5 
+4 4 4 4 
+3 3 3 
+2 2 
+1 
+"""
+N = int(input())
+for i in range(N):
+    print(i*(str(i)+" "))
+for j in range(N):
+    print(N*(str(N)+" "))
+    N=N-1
+
+
+"""
+Given a number N, write a program to print a pyramid of 2*N-1 rows using pluses(+) and hashes(#)
+#Sample Input1:5
+#Sample Input2:8
+#Expected Output1:
+        # 
+      + # 
+    + + # 
+  + + + # 
++ + + + # 
+  + + + # 
+    + + # 
+      + # 
+        # 
+
+#Expected Output2:
+              # 
+            + # 
+          + + # 
+        + + + # 
+      + + + + # 
+    + + + + + # 
+  + + + + + + # 
++ + + + + + + # 
+  + + + + + + # 
+    + + + + + # 
+      + + + + # 
+        + + + # 
+          + + # 
+            + # 
+              # 
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    up_Spaces = (N-i)*"  "
+    strs = (i-1)*"+ "+"# "*1
+    print(up_Spaces+strs)
+for j in range(1,N):
+    down_spaces = j*"  "
+    strs = (N-(j+1))*"+ "+"# "*1
+    print(down_spaces+strs)
+
+
+"""
+Given a Number N, write a program to print a butterfly of (2*N)-1 rows using stars(* )
+#Sample Input1:4
+#Sample Input2:5
+#Expected Output1:
+*             * 
+* *         * * 
+* * *     * * * 
+* * * * * * * * 
+* * *     * * * 
+* *         * * 
+*             * 
+#Expected Output2:
+*                 * 
+* *             * * 
+* * *         * * * 
+* * * *     * * * * 
+* * * * * * * * * * 
+* * * *     * * * * 
+* * *         * * * 
+* *             * * 
+*                 * 
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    left_Triangle = i*"* "
+    mid_Spaces = (2*(N-i)*"  ")
+    right_Triangle = i*"* "
+    print(left_Triangle+mid_Spaces+right_Triangle)
+for j in range(1,N):
+    left_Triangle = (N-j)*"* "
+    mid_Spaces = (2*(j)*"  ")
+    right_Triangle = (N-j)*"* "
+    print(left_Triangle+mid_Spaces+right_Triangle)
+
+
+"""
+Given a number N, write a program to print a Diamond of (2*N)-1 rows using stars(*)
+#Sample Input1:3
+#Sample Input2:5
+#Expected Output1:
+  *   
+ * *  
+* * * 
+ * *  
+  *
+#Expected Output2:
+    *     
+   * *    
+  * * *   
+ * * * *  
+* * * * * 
+ * * * *  
+  * * *   
+   * *    
+    * 
+"""
+N = int(input())
+for i in range(1,(N+1)):
+    spaces = (N-i)*" "
+    strs = i*"* "
+    print(spaces+strs+spaces)
+for j in range(1,N):
+    strs = (N-j)*"* "
+    spaces = j*" "
+    print(spaces+strs+spaces)
