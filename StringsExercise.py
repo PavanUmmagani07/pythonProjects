@@ -104,10 +104,293 @@ print(String[2:])
 String = input()
 print(String[:-1])
 
+"""
+Given a string, Write a program to print only the alphabets in the given string
+#Sample Input1:##P##Y##T##H##O##N##
+#Sample Input2:--C--A--R--
+#Expected Output1:PYTHON
+#Expected Output2:CAR
+"""
+String = input()
+print(String[2:-2:3])
+
 
 """
-Write a program that reads two words W1 and W2.W1 contains two parts.The first part contains W2 and the second part contains the remaining letters in W1.
-print W1 with the first part as stars(*)
+Given a string, write a program that checks if all the characters in the string are digits
+Print True if all the characters in the string are digits otherwise False
+#Sample Input1:5GNetwork
+#Sample Input2:1245387
+#Expected Output1:False
+#Expected Output2:True
+"""
+String = input()
+print(String.isdigit())
+
+"""
+Given a string S, write a program to prints the modified string by removing all the leading and trailing spaces from the string s
+#Sample Input1:      PAVAN KALYAN          
+#Sample Input2:   FULLSTACK WEB DEVELOPER
+#Expected Output1:PAVAN KALYAN
+#Expected Output2:FULLSTACK WEB DEVELOPER
+"""
+String = input()
+print(String.strip())
+
+"""
+Given a string S, Write a program that modifies the string by removing the leading and trailing Stars(*)  from the string S
+#Sample Input1:***PYTHON***
+#Sample Input2:*****PAVAN KALYAN****
+#Expected Output1:PYTHON
+#Expected Output2:PAVAN KALYAN
+"""
+String = input()
+print(String.strip("*"))
+
+"""
+Given a string, Write a program to print the string by converting all the characters in the string to lowercase
+#Sample Input1:NOVEMBER
+#Sample Input2:AMaziNG JouRNEY
+#Expected Output1:november
+#Expected Output2:amazing journey
+"""
+String = input()
+print(String.lower())
+
+"""
+Given a string, Write a program to check if all the characters in the string are in uppercase
+Print True if the string contains all uppercase characters, otherwise print false
+#Sample Input1:IEEE
+#Sample Input2:CommuNiTY
+#Expected Output1:True
+#Expected Output2:False
+"""
+String = input()
+is_Upper = String.upper()
+print(String==is_Upper)
+
+"""
+Given a string in the format dd-mm-yy S, write a program to convert the string from dd-mm-yy to dd/mm/yy format
+#Sample Input1:07-11-2023
+#Sample Input2:07-07-2000
+#Expected Output1:07/11/2023
+#Expected Output2:07/07/2000
+"""
+String = input()
+print(String.replace("-","/"))
+
+
+"""
+Given a string S, write a program that prints the given string converting all the characters to lowercase and uppercase
+#Sample Input1:Learning
+#Sample Input2:Transportation
+#Expected Output1:learning,LEARNING
+#Expected Output2:transportation,TRANSPORTATION
+"""
+String = input()
+print(String.lower())
+print(String.upper())
+
+
+"""
+Given a string, Write a program that prints all the uppercase letters of the given string
+#Sample Input1:SofTwArE
+#Sample Input2:HACKthons
+#Expected Output1:STAE
+#Expected Output2:HACK
+"""
+String = input()
+for i in range(len(String)):
+    if(String[i].isupper()):
+        print(String[i], end="")
+
+
+"""
+Given an url, write a program that checks if the given URl is a secured URL.
+Print True if the given URL is a secured URL. otherwise, Print False
+#Sample Input1:https://docs.google.com
+#Sample Input2:learning.cccp.in
+#Expected Output1:True
+#Expected Output2:False
+"""
+Url = input()
+is_Secured_Url = Url.startswith("https://")
+print(is_Secured_Url)
+
+
+"""
+Given a file name with the file extension, write a program that checks if the given file is a python file.
+print True if the  file is a python file Otherwise, print False
+#Sample Input1:add_numbers.py
+#Sample Input2:card.html
+#Expected Output1:True
+#Expected Output2:False
+"""
+file = input()
+is_endswith = file.endswith(".py")
+print(is_endswith)
+
+
+"""
+Given a string, check if the given string is a palindrome.
+A palindrome is a sequence of characters that can be read the same way whether you start from the begining or the end
+#Sample Input1:madam
+#Sample Input2:batsman
+#Expected Output1:True
+#Expected Output2:False
+"""
+string = input()
+reversed_string = ""
+for i in string:
+    reversed_string = i+reversed_string
+is_palindrome = string == reversed_string
+print(is_palindrome)
+
+"""
+You are given a string, write a program to find whether the string is palindrome or not
+NOTE:Treat uppercase letters and lowercase letters as same when comparing letters 
+#Sample Input1:Madam
+#Sample Input2:Treat
+#Expected Output1:True
+#Expected Output2:False
+"""
+String = input()
+String= String.casefold()
+reversed_String=""
+for i in String:
+    reversed_String=i+reversed_String
+is_palindrome = String==reversed_String
+print(is_palindrome)
+
+"""
+Given a password S, checks if S is a valid password.
+The password is valid only if it contains at least one digit
+Print Valid Password if S is a valid Password. otherwise, print Invalid Password
+#Sample Input1:Qwerty00
+#Sample Input2: Dashboard
+#Expected Output1:True
+#Expected Output2:False
+"""
+String = input()
+contains_digit = False
+for char in String:
+    is_digit = char.isdigit()
+    if is_digit:
+        contains_digit = True
+print(contains_digit)
+
+
+"""
+Given a string, write a program to modify the string as given below
+Add a space before each uppercase character excluding the first uppercase Character
+print the modified string
+#Sample Input1:TitleCase
+#Sample Input2:TheLionKing
+#Expected Output1:Title Case
+#Expected Output2:The Lion King
+"""
+String = input()
+new_Str = String[0]
+for i in range(1,len(String)):
+    each_Character = String[i]
+    is_upper = each_Character.upper()
+    if(is_upper==each_Character):
+        new_Str = new_Str+" "+each_Character
+    else:
+        new_Str= new_Str+each_Character
+print(new_Str)
+
+
+"""
+Given a string, write a program to modify the string as given below.
+Add a hypen(-) before each upper-case character
+Convert upper-case characters into lower-case characters
+print the modified string
+#Sample Input1:aChristmasStory
+#Sample Input2:theFox
+#Expected Output1:a-christmas-story
+#Expected Output2:the-fox
+"""
+
+
+"""
+Given a String, write a program to that checks if the given string is palindrome .
+print Palindrome  if the given string is a palindrome. otherwise, print Not a Palindrome
+#Sample Input1:Madam
+#Sample Input2:Rover
+#Expected Output1:Palindrome
+#Expected Output2:Not a Palindrome
+"""
+String = input()
+String = String.casefold()
+reversed_string = String[::-1]
+if(String==reversed_string):
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+
+
+"""
+You are given a string, write a program to find whether the string is palindrome or not
+NOTE: Treat uppercase letters and lower case letters as same as when comparing letters. ignore spaces and quotes within the string
+#Sample Input1:No lemon no melon
+#Sample Input2:Race Cars
+#Sample Input3: God's Dog
+#Expected Output1:True
+#Expected Output2:False
+#Expected Output3:True
+"""
+String = input()
+String = String.casefold()
+String = String.replace(" ","")
+String = String.replace("'","")
+reversed_string = String[::-1]
+if(String==reversed_string):
+    print(True)
+else:
+    print(False)
+
+
+
+"""
+Given a sentence S. Write a program to remove all the vowels in the given sentence
+#Sample Input1:Hello World
+#Sample Input2:Once upon a time
+#Expected Output1:Hll Wrld
+#Expected Output2:nc pn tm
+"""
+String = input()
+result = ""
+for i in String:
+    X = i.lower()
+    if(X=="a" or X=="e" or X=="i" or X=="o" or X=="u"):
+        result+=""
+    else:
+        result = result + i
+print(result)
+
+"""
+Given a character C, write a program to check if the C is a Lowercase Letter or Uppercase Letter or Digit or a Special character
+#Sample Input1:9
+#Sample Input2:A
+#Sample Input3: e
+#Sample Input4: @
+#Expected Output1:Digit
+#Expected Output2:Uppercase Letter
+#Expected Output3:Lowercase Letter
+#Expected Output4:Special Character
+"""
+
+String = input()
+if(String.isdigit()):
+    print("Digit")
+elif(String.islower()):
+    print("Lowercase Letter")
+elif(String.isupper()):
+    print("Uppercase Letter")
+else:
+    print("Special Character")
+
+"""
 #Sample Input1:
 #Sample Input2:
 #Expected Output1:
