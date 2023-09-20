@@ -653,3 +653,490 @@ if(count>2):
     print("Number has more than 2 factors")
 else:
     print("Number doesn't have more than 2 factors")
+
+
+"""
+Given a string, Write a program to print substrings in expected pattern of N rows, where N is the lenght of the string
+#Sample Input1:Rahul
+#Sample Input2:Pavan
+#Expected Output1:R
+                  Ra
+                  Rah
+                  Rahu
+                  Rahul
+#Expected Output2:P
+                  Pa
+                  Pav
+                  Pava
+                  Pavan
+"""
+String  = input()
+for index in range(1,len(String)+1):
+    print(String[:index])
+
+
+"""
+Given a string S and N integers Where N is the length of string S
+Print the characters as per the order of the integers given
+#Sample Input1:goindc
+              5,1,4,2,3,0
+#Expected Output1:coding
+#Sample Input2:abc
+               0,1,2
+#Expected Output2:abc
+
+#Sample Input3:eimag
+               1,2,3,4,0
+#Expected Output3:image
+"""
+
+String = input()
+updated_str=""
+for i in range(len(String)):
+     N = int(input())
+     updated_str = updated_str+String[N]
+print(updated_str)
+
+
+"""
+Write a program to print if the given number is a Prime number
+Note: A prime Number is divisible only by itself and 1
+#Sample Input1:5
+#Sample Input2:4
+#Expected Output1:Prime Number
+#Expected Output2:Not a Prime Number
+"""
+N = int(input())
+factors = 0
+for i in range(1,N+1):
+    if(N%i==0):
+        factors = factors+1
+if(factors>2):
+    print("Not a Prime Number")
+else:
+    print("Prime Number")
+
+N = input()
+factors = 0
+for i in range(2,N):
+    if(N%i==0):
+        factors+1
+if(factors==0):
+    print("Prime Number")
+else:
+    print("Not a Prime Number")
+
+
+
+"""
+Given a string and N indices, where N i the length of the string.
+Write a Program to print the character of the string present at each index of the given N indices
+#Sample Input1:tarc
+               3,1,2,0
+#Sample Input2:eesnv
+               2,0,4,1,3
+#Expected Output1:c
+                  a
+                  r
+                  t
+#Expected Output2:s
+                  e
+                  v
+                  e
+                  n
+"""
+String = input()
+for i in range(len(String)):
+     N = int(input())
+     print(String[N])
+
+"""
+Given a number N, write a program to print a square of N rows and N columns using numbers starting from 0
+#Sample Input1:3
+#Sample Input2:4
+#Expected Output1:0 0 0
+                  1 1 1
+                  2 2 2
+#Expected Output2:0 0 0 0
+                  1 1 1 1
+                  2 2 2 2
+                  3 3 3 3
+"""
+N = int(input())
+for i in range(N):
+    print((str(i)+" ")*N)
+
+"""
+Write a program to print numbers from 1 to N in each column forming a square pattern of N rows and N columns
+#Sample Input1:3
+#Expected Output1:
+1 1 1 
+2 2 2 
+3 3 3
+#Sample Input2:7
+#Expected Output2:
+1 1 1 1 1 1 1 
+2 2 2 2 2 2 2 
+3 3 3 3 3 3 3 
+4 4 4 4 4 4 4 
+5 5 5 5 5 5 5 
+6 6 6 6 6 6 6 
+7 7 7 7 7 7 7 
+"""
+N = int(input())
+for i in range(1,N+1):
+    print((str(i)+" ")*N)
+
+
+"""
+Write a program to print numbers from 1 to N in each row forming a rectangulae pattern of M rows and N columns
+#Sample Input1:2,3
+#Expected Output1:
+1 2 3 
+1 2 3 
+#Sample Input2:5,4
+#Expected Output2:
+1 2 3 4 
+1 2 3 4 
+1 2 3 4 
+1 2 3 4 
+1 2 3 4
+"""
+M = int(input())
+N = int(input())
+Number_Pattern = ""
+for i in range(1,N+1):
+    Number_Pattern = Number_Pattern+(str(i)+' ')
+for k in range(1,M+1):
+    print(Number_Pattern)
+
+"""
+Given a starting number S and a number N, write a program that prints a square of N rows and N columns using numbers starting from S
+#Sample Input1:3,4
+#Sample Input2:8,5
+#Expected Output1:3 4 5 6
+                  3 4 5 6
+                  3 4 5 6
+                  3 4 5 6
+#Expected Output2:8 9 10 11 12
+                  8 9 10 11 12
+                  8 9 10 11 12
+                  8 9 10 11 12
+                  8 9 10 11 12
+"""
+M = int(input())
+N = int(input())
+Number_Pattern = ""
+for i in range(M,N+M):
+    Number_Pattern = Number_Pattern+(str(i)+' ')
+for k in range(1,N+1):
+    print(Number_Pattern)
+
+"""
+Given a number N, write a program to find the count of 0's in N.
+Print Count of Zeros is grater than three if there are more than three 0's in the given number
+otherwise, print count of zeroes is not grater than three
+#Sample Input1:1030800
+#Expected Output1:Count of zeroes is greater than three
+#Sample Input2:84020
+#Expected Output2:Count of Zeroes is not greater than three
+"""
+N=input()
+Count = 0
+for i in N:
+    if(i=="0"):
+        Count = Count+1
+if(Count>3):
+    print("Count of zeroes is greater than three")
+else:
+    print("Count of zeroes is not greater than three")
+
+
+"""
+Given a number N, write a program to find the count of even digits in N.
+Print Count of even digits is greater than two if there are moorethan two even digits in the given number.
+Otherwise, Print Count of even digits is not greater than two.
+
+#Sample Input1:2563408
+#Expected Output1:Count of even digits is greater than two
+#Sample Input2:32
+#Expected Output2:Count of even digits is not greater than two
+"""
+N=input()
+Count = 0
+for i in N:
+    i = int(i)
+    if(i%2==0):
+        Count = Count+1
+if(Count>2):
+    print("Count of even digits is greater than two")
+else:
+    print("Count of even digits is not greater than two")
+
+
+
+
+"""
+Given a number N, write a program to print a Right Angled Triangle of N rows using stars(*)
+#Sample Input1:3
+#Expected Output1:*
+                  * * *
+                  * * * * *
+#Sample Input2:6
+#Expected Output2:*
+                  * * *
+                  * * * * *
+                  * * * * * * *
+                  * * * * * * * * *
+                  * * * * * * * * * * *
+"""
+N = int(input())
+stars = 1
+for i in range(N):
+    row = "* "*stars
+    stars = stars+2
+    print(row)
+
+
+"""
+Given a number N, write a program to print an Inverted Right Angled Triangle of N rows using stars(*)
+#Sample Input1:3
+#Expected Output1:
+* * * 
+* * 
+* 
+
+#Sample Input2:7
+#Expected Output2:
+* * * * * * * 
+* * * * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+"""
+N = int(input())
+for i in range(N):
+    print("* "*N)
+    N=N-1
+
+"""
+Given a number N, write a program that prints a Hollow Square of N+2 rows using pluses(+)
+#Sample Input1:5
+#Expected Output1:
++ - - - - - +
+|           |
+|           |
+|           |
+|           |
+|           |
++ - - - - - +
+
+#Sample Input2:2
+#Expected Output2:
++ - - +
+|     |
+|     |
++ - - +
+"""
+N = int(input())
+print("+ "+"- "*N+"+")
+for i in range(1,N+1):
+    hollow_spaces="  "*N
+    print("| "+hollow_spaces+"|")
+print("+ "+"- "*N+"+")
+
+
+"""
+Given a title case string, write a program to modify the string as given below.
+Add a hypen(-) before each uppercase character excluding the first uppercase
+Convert all uppercase characters into lowercase characters
+#Sample Input1:TitleCase
+#Expected Output1:title-case
+#Sample Input2:AToyStory
+#Expected Output2:a-toy-story
+"""
+
+
+"""
+Write a program to print the sum of even numbers in first N natural Numbers
+#Sample Input1:5
+#Expected Output1:6
+#Sample Input2:4
+#Expected Output2:6
+"""
+N = int(input())
+Sum = 0
+for i in range(1,N):
+    if(i%2==0):
+        Sum = Sum+i
+print(Sum)
+
+"""
+Write a program to print the sum of odd numbers in first N natural Numbers
+#Sample Input1:10
+#Expected Output1:25
+#Sample Input2:5
+#Expected Output2:9
+"""
+N = int(input())
+Sum = 0
+for i in range(1,N):
+    if(i%2!=0):
+        Sum = Sum+i
+print(Sum)
+
+
+"""
+Given an integer N, Write a program to find if the given number is a composite number or not. if it is composite, print True or else print False
+#Sample Input1:12
+#Expected Output1:True
+#Sample Input2:3
+#Expected Output2:False
+"""
+N = int(input())
+output =True
+for i in range(1,N):
+    if(N%i!=0):
+        output = False
+print(output)
+
+
+"""
+Given an integer number M, N as input. Write a programe to print a stripped rectangular pattern of M rows and N columns using (+ and -)Character
+#Sample Input1:5,7
+#Expected Output1:
++ + + + + + + 
+- - - - - - - 
++ + + + + + + 
+- - - - - - - 
++ + + + + + + 
+#Sample Input2:7,5
+#Expected Output2:
++ + + + + 
+- - - - - 
++ + + + + 
+- - - - - 
++ + + + + 
+- - - - - 
++ + + + +
+"""
+
+M = int(input())
+N = int(input())
+for i in range(1,M+1):
+    if(i%2!=0):
+        print("+ "*N)
+    else:
+        print("- "*N)
+
+
+"""
+Given two numbers M and N, Write a program to print a Hollow Rectangle of M+2 rows and N+2 columns using pluses(+), Hypens(-) and pipes(|)
+#Sample Input1:3,10
+#Expected Output1:
++----------+
+|          |
+|          |
+|          |
++----------+
+
+#Sample Input2:5,10
+#Expected Output2:
++----------+
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+"""
+M = int(input())
+N = int(input())
+print("+"+"-"*N+"+")
+for i in range(1,M+1):
+    hollow_Spaces = " "*N
+    print("|"+hollow_Spaces+"|")
+print("+"+"-"*N+"+")
+
+
+"""
+Given a word W, write a program that prints the letters of the word in N rows as an Inverted Right Angled Triangle as shown in the sample output,where N is the length of the word W
+#Sample Input1:game
+#Expected Output1:
+game
+gam
+ga
+g
+#Sample Input2:TUPLE
+#Expected Output2:
+TUPLE
+TUPL
+TUP
+TU
+T
+#Sample Input3:uNiCoRn
+#Expected output3:
+uNiCoRn
+uNiCoR
+uNiCo
+uNiC
+uNi
+uN
+u
+"""
+Word = input()
+for i in range(len(Word),0,-1):
+    print(Word[:i])
+
+"""
+Given two strings S1 and S2 of equal length, write a program that prints a new string by appending characters from S1 frist and then from S2 alternately
+NOTE: The two strings S1 and S2 given as inputs will always have equal length
+#Sample Input1:
+bring
+camel
+#Expected Output1:
+baieg
+
+#Sample Input2:
+APPRECIATE
+BACKPACKER
+#Expected Output2:
+AAPKEAIKTR
+
+#Sample Input3
+PAVAN
+MOUSE
+#Expected Output3:
+POVSN
+"""
+
+"""
+Given a number N, write a program to print an Inverted Right Angled triangle of N rows using stars(*)
+#Sample Input1:5
+#Expected Output1:
+* * * * * * * * * 
+    * * * * * * * 
+        * * * * * 
+            * * * 
+                *
+#Sample Input2:
+#Expected Output2:
+"""
+# N = int(input())
+# stars = 2*N-1
+# for i in range(N,0,-1):
+#     hollow_Spaces =
+#     rows = hollow_Spaces+"* "*stars
+#     stars = stars-2
+#     print(rows)
+#
+
+
+"""
+#Sample Input1:
+#Expected Output1:
+#Sample Input2:
+#Expected Output2:
+"""
