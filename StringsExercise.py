@@ -391,8 +391,20 @@ else:
     print("Special Character")
 
 """
-#Sample Input1:
-#Sample Input2:
-#Expected Output1:
-#Expected Output2:
+Given a string, write a program to modify the string as given below.
+1)Add a hypen(-) before each upper-case character.
+2)Convert upper-case characters into lower-case characters.
+Print the modified string
+#Sample Input1:aChristmasStory
+#Expected Output1:a-christmas-story
+#Sample Input2:theFox
+#Expected Output2:the-fox
 """
+String = input()
+result = ""
+for i in String:
+    if(i.isupper()):
+        result = result+"-"+i.swapcase()
+    else:
+        result = result+i
+print(result)
