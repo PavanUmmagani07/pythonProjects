@@ -408,3 +408,177 @@ for i in String:
     else:
         result = result+i
 print(result)
+
+"""
+Given two strings S1 and S2,write a program that checks if S2 is at the begining or ending of S1.
+Print True if S2 is at the beginning or ending of S1.
+Otherwise,print False.
+
+#Sample Input1:
+Manager
+Man
+#Expected Output1:True
+#Sample Input2:
+Helicopter
+cop
+#Expected Output2:False
+#Sample Input3:
+Programmer
+ammer
+#Expected Output3:True
+"""
+S1 = input()
+S2 = input()
+len_S2 = len(S2)
+str_start = S1[:len_S2]
+str_end = S1[(len_S2):]
+if((S2== str_start) or (S2==str_end)):
+    print(True)
+else:
+    print(False)
+
+
+"""
+Write a Program that reads two words A, B, and an Index I. Check if B starts at index I in A.
+#Sample Input1:
+Repeat
+pea
+2
+#Expected Output1:True
+#Sample Input2:
+Banana
+Ball
+0
+#Expected Output2:False
+"""
+A = input()
+B = input()
+Index = int(input())
+Word = A[Index:Index+len(B)]
+if(B == Word):
+    print(True)
+else:
+    print(False)
+
+
+"""
+Write a program that reads two words A and B and checks if the second word B is the last part of the first word A.
+#Sample Input1:
+Blackhole
+hole
+#Expected Output1: True
+
+#Sample Input2:
+boomerang
+boom
+#Expected output2:False
+
+#sample Input3:
+nxtwave ccbp
+ccbp
+#Expected output3:True
+"""
+A = input()
+B = input()
+start_index = len(A)-len(B)
+Word = A[start_index:]
+print(Word)
+if(B==Word):
+    print(True)
+else:
+    print(False)
+
+"""
+Write  a program that reads two numbers A and B and checks if the A is greater than B and checks if the A is greatr than B. print the result as shown n the sample output 
+#Sample Input1:
+8
+5
+#Expected Output1: A > B is True
+#Sample Input2:
+12
+32
+#Expected output2: A > B is False
+"""
+A = int(input())
+B = int(input())
+if(A>B):
+    print("A > B is True")
+else:
+    print("A > B is False")
+
+"""
+Write a program that reads two numbers A and B, and checks if B is greater than A by one
+#Sample Input1:
+2
+3
+#Expected Output1:True
+#Sample Input2:
+2
+5
+#Expected output2:False
+"""
+A = int(input())
+B = int(input())
+C = A+1
+if(B==C):
+    print(True)
+else:
+    print(False)
+
+"""
+Write a program that reads a word and checks if the first letter and last letter of the word are not the same.
+#Sample Input1:Python
+#Expected Output1:True
+#Sample Input2:label
+#Expected output2:False
+"""
+Word = input()
+if(A[0]!=A[:-1]):
+    print(True)
+else:
+    print(False)
+
+"""
+Write a program that reads two digit number N. The N consists of only two digits. check if the sum of the digits of N is greater than 7
+#Sample Input1:45
+#Expected Output1:True
+#Sample Input2:12
+#Expected output2:False
+"""
+N = input()
+Condition=int(N[0])+int(N[1])>7
+if Condition:
+    print(True)
+else:
+    print(False)
+
+"""
+Write a program to check if the given string is a valid password or not. A string is considered as a valid password if the number of characters present is greater than 7
+#Sample Input1:passwd
+#Expected Output1:False
+#Sample Input2:1@q92$482%f
+#Expected output2:True
+"""
+String = input()
+if(len(String)>7):
+    print(True)
+else:
+    print(False)
+
+"""
+Write a program to check if the first three characters in the two given strings are the same.
+#Sample Input1:
+Apple
+Application
+#Expected Output1:True
+#Sample Input2:
+Android
+Application
+#Expected output2:False
+"""
+String1 = input()
+String2 = input()
+if(String1[:3]==String2[:3]):
+    print(True)
+else:
+    print(False)

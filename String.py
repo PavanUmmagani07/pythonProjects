@@ -539,4 +539,10 @@ print(word_index)
 text = "I have a spare key, if I lose my key"
 word_index = text.rindex("else")
 print(word_index)
-#Output:-1]
+#Output:-1
+
+#Changing a Character
+message = 'sea you soon'
+#message[2]='e'
+#print(message) #Type error: 'str' object doesnot support item assignment
+#Strings are Immuatble
