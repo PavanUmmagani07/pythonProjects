@@ -5,8 +5,8 @@ Write a program that reads a number X and Checks,
 print "X is greater than 30" if X is greater than 30
 print "X is greater than 30 and X is greater than 50" on each line if X is greater than 50
 #Sample Input1:45
-#Sample Input2:99
 #Expected Output1: X is Greater than 30
+#Sample Input2:99
 #Expected Output2: X is greater than 30
                    X is greater than 50
 """
@@ -29,8 +29,8 @@ Write a program that reads the Rank R of a student and checks,
 Print "One of Top 3" if the R is less than or equal to 3
 print "Not Top 3 but One of Top 10" if R is less than or equal to 10 but not less thaan or equal to 3
 #Sample Input1:7
-#Sample Input2:3
 #Expected Output1:Not Top 3 but One of Top 10
+#Sample Input2:3
 #Expected Output2:One of Top 3
 """
 
@@ -51,8 +51,8 @@ Write a program that reads the weight W of a box in kg and checks,
 Print Box is Heavier if W is greater than or equal to 100.
 print Box is heavy if W is not greater than or equal to 100 but greater than or equal to 30
 #Sample Input1:60
-#Sample Input2:150
 #Expected Output1:Box is Heavy
+#Sample Input2:150
 #Expected Output2:Box is Heavier
 """
 
@@ -73,8 +73,8 @@ Write a program that reads two strings H and I and checks,
 Print "Allowed to Exam - Has Hall ticket if H is equal to "Y".
 Print Allowed to Exam - Has Identification Card if H is not equal to "Y" and I is equal to "Y".
 #Sample Input1:Y,N
-#Sample Input2:
 #Expected Output1:Allowed to Exam - Has Hall ticket
+#Sample Input2:
 #Expected Output2:
 """
 
@@ -96,8 +96,8 @@ Print Divisible by 5 if N is Divisible by 5 .but not divisible by 10.
 Print Divisible by 10 or 5 if N is not divisible by 10 and N is not divisible by 5
 
 #Sample Input1:5
-#Sample Input2:15
 #Expected Output1:Divisible by 5
+#Sample Input2:15
 #Expected Output2:Divisible by 5
 """
 Num =int(input())
@@ -113,8 +113,8 @@ else:
 """
 Write a program that reads three numbers A,B and C and Prints the greatest number among the three given numbers
 #Sample Input1:10,15,20
-#Sample Input2:-10,59,34
 #Expected Output1:20
+#Sample Input2:-10,59,34
 #Expected Output2:59
 """
 
@@ -136,8 +136,8 @@ Write a program that reads the marks M of a student and checks,
 print Discount is 200 if M is greater than or equal to 90
 Print Discount is 100 if M is greater than or equal to 50 but not greater than or equal to 90. 
 #Sample Input1:90
-#Sample Input2:35
 #Expected Output1:Discount is 200
+#Sample Input2:35
 #Expected Output2:No Discount
 """
 
@@ -158,8 +158,8 @@ print Draw if A is equal to B
 Print Lose if A is less than B
 
 #Sample Input1:26,47
-#Sample Input2:24,15
 #Expected Output1:Lose
+#Sample Input2:24,15
 #Expected Output2:Win
 """
 
@@ -181,8 +181,8 @@ The output should be a single line containing a string representing the grade of
 #C should be printed if the given marks are greater than or equal to 60 and lessthan or equal to 70.
 #F Should be printed if the given marks are lessthan 60
 #Sample Input1:70.5
-#Sample Input2:90
 #Expected Output1:B
+#Sample Input2:90
 #Expected Output2:A
 """
 Marks = float(input())
@@ -198,8 +198,125 @@ else:
 
 
 """
-#Sample Input1:
-#Sample Input2:
+write a program that reads a two-digit number N and checks,
+1) if the number N is greater than 25
+2)if the first digit of N is greater than the second digit of N.
+print the result as shown in the sample output
+
+#Sample Input1:28
 #Expected Output1:
+True
+False
+#Sample Input2:87
 #Expected Output2:
+True
+True
+"""
+#Method_1
+a=input()
+print(int(a)>25)
+print(a[0]>a[1])
+#METHOD_2
+N = input()
+if(int(N)>25 and N[0]>N[1]):
+    print(True)
+    print(True)
+elif(int(N)>25 and N[0]>N[1]):
+    print(True)
+    printN = input()
+condition_1 = int(N)>25 and int(N[0])>int(N[1]) #True&True
+condition_2 = int(N)>25 and int(N[0])<int(N[1])  #True&False
+condition_3 = int(N)<25 and int(N[0])>int(N[1]) #False%True
+condition_4 = int(N)>25 and int(N[0])==int(N[1]) #True&false
+if(condition_1):
+    print(True)
+    print(True)
+elif(condition_2):
+    print(True)
+    print(False)
+elif(condition_3):
+    print(False)
+    print(True)
+elif(condition_4):
+    print(True)
+    print(False)
+else:
+    print(False)
+    print(False)
+
+"""
+Write a program that ereads two numbers A and B and checks ,
+1)if A is less than or equal to B.
+2)if B is less than or equal to A.
+print the result as shown in the sample output
+#Sample Input1:
+5
+3
+#Expected Output1:
+A <= B is False
+B <= A is True
+
+#Sample Input2:
+21
+64
+#Expected output2:
+A <= B is True
+B <= A is False
+
+#Sample Input3:
+11
+11
+#Expected output3:
+A <= B is True
+B <= A is True
+"""
+A = int(input()) #5
+B = int(input()) #3
+Condition_1 = A<=B
+Condition_2 = B<=A
+if(Condition_1==False):
+    print("A <= B is False")
+    print("B <= A is True")
+elif(Condition_1==Condition_2):
+    print("A <= B is True")
+    print("B <= A is True")
+else:
+    print("A <= B is True")
+    print("B <= A is False")
+
+"""
+#Sample Input1:
+#Expected Output1:
+#Sample Input2:
+#Expected output2:
+"""
+
+
+"""
+#Sample Input1:
+#Expected Output1:
+#Sample Input2:
+#Expected output2:
+"""
+
+"""
+#Sample Input1:
+#Expected Output1:
+#Sample Input2:
+#Expected output2:
+"""
+
+"""
+#Sample Input1:
+#Expected Output1:
+#Sample Input2:
+#Expected output2:
+"""
+
+
+"""
+#Sample Input1:
+#Expected Output1:
+#Sample Input2:
+#Expected output2:
 """
