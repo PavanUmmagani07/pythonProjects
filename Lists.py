@@ -96,3 +96,40 @@ list_a = [1,2,3,5]
 print(list_a)
 list_a[3] = 4
 print(list_a) #[1, 2, 3, 4]
+
+#Exapmle problem
+animals = ['cat', 'dog']
+wild_animals = ['Tiger','Fox']
+animals= animals+[wild_animals]
+print(animals)
+
+#OBJECT
+"""
+in general,anything that can be assigned to a variable in python is referred as object.
+Strings, Integers,Float,List etc. are all objects 
+Ex: "A", 85, 1.25, [1,3,5,'six','a']
+
+#Identity of an Object
+
+When ever an object is created in python, it will be given a unique identifier(id)
+This unique id can be different for each time you run the program
+Ex: 'A'=> id:140035229724336
+[1,2,3]=> id:139630925071104
+
+Every object that you use in a python program will be stored in computer Memory
+The unique id will be related to the location where the object is stored in computer memory
+
+#Finding Id
+We can use the id() to find the id of a object.
+id()=>Gives id of this object
+Ex:print(id('Hello'))
+"""
+print(id('Hello')) #This unique id can be different for each time you run the program.
+
+#Example
+A = 'Hello'
+print(id(a))
+
+#Example
+list_a =[5,"Six",8.2,]
+print(id(list_a))
