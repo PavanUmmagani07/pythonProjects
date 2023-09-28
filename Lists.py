@@ -196,3 +196,125 @@ list_a = [1,a]
 print(list_a)
 a =3
 print(list_a)
+
+#Splitting a String
+"""
+Syntax: str_var.split(separator)
+Splits a string into a list
+if no separator is specified Default separator is white space
+"""
+#Example
+nums = "1 2 3 4"
+num_list = nums.split()
+print(num_list) #['1', '2', '3', '4']
+
+#Multiple whitespaces are considered as single when splitting
+#Example
+nums = "1    2   3 4"
+num_list = nums.split()
+print(num_list) #['1', '2', '3', '4']
+
+nums = "1    2   3 4"
+num_list = nums.split(" ")
+print(num_list) #['1', '', '', '', '2', '', '', '3', '4']
+
+#New line(\n) and tab space(\t) are also whitespace
+#Example
+nums = "1\n2\t3 4"
+num_list = nums.split()
+print(num_list) #['1', '2', '3', '4']
+
+#Breaks up a string at the specified separator
+#Example
+nums = '1,2,3,4'
+num_list = nums.split(',')
+print(num_list) #['1', '2', '3', '4']
+
+nums = '1,2,,3,4'
+num_list = nums.split(',')
+print(num_list) #['1', '2', '', '3', '4']
+
+nums = '1,2,,3,4,'
+num_list = nums.split(',')
+print(num_list) #['1', '2', '', '3', '4', '']
+
+String_S = "Python is a programming language"
+string_list = String_S.split("a")
+print(string_list)#['Python is ', ' progr', 'mming l', 'ngu', 'ge']
+
+String_S = "step-by-step execution of code"
+string_list = String_S.split("step")
+print(string_list)#['', '-by-', ' execution of code']
+
+
+#Example
+String_S = "PAVAN KALYAN"
+string_list = String_S.split("A")
+print(string_list) #['P', 'V', 'N K', 'LY', 'N']
+
+
+#JOINING STRING
+"""
+Syntax: str.join(sequence)
+Takes all the items in a 'sequence of strings' and joins them into one string
+"""
+#Example:
+list_a = ['Python is ', ' progr', 'mming l', 'ngu', 'ge']
+string_a = "a".join(list_a)
+print(string_a) #Python is a programming language
+
+#Example
+# list_a = list(range(5))
+# string_a = ",".join(list_a)
+# print(string_a)
+#TypeError: sequence item 0: expected str instance, int found
+#Sequence should not contain any non-string values
+
+#NEGATIVE INDEXING
+"""
+Using a negative index returns the nth item from the end of list
+Last item in the list can be accessed with index -1
+"""
+
+list_a = [5, 4, 3, 2, 1]
+item = list_a[-4]
+print(item) #4
+
+#Slicing
+#you can also specify negative indices while slicing a list.
+list_a = [5, 4, 3, 2, 1]
+list_b = list_a[-3:-1]
+print(list_b) #[3, 2]
+
+#While slicing, index can go out of bounds
+list_a = [5, 4, 3, 2, 1]
+list_b = list_a[-7:-1]
+print(list_b) #[5, 4, 3, 2]
+
+#Extended Slicing(Negative Step Size)
+"""
+Syntax:variable[start:end:negative_step]
+Negative step determines the decrement between each index for slicing
+Start must be greater than end (start>end)
+"""
+list_a = [5, 4, 3, 2, 1]
+list_b = list_a[4:1:-1]
+print(list_b) #[1, 2, 3]
+
+#Negative step requires the start to be greater than end.
+#if start > end we get an empty list
+
+list_a = [5, 4, 3, 2, 1]
+list_b = list_a[2:4:-1]
+print(list_b) #[] -> Empty List
+
+#Prints the list as it is if start and end indices are not specified
+#Example
+list_a = [5, 4, 3, 2, 1]
+list_b = list_a[::]
+print(list_b) #[5, 4, 3, 2, 1]
+
+#-1 for step will reverse the order of items(Reversing the entire list)
+list_a = [5, 4, 3, 2, 1]
+list_b = list_a[::-1]
+print(list_b) #[1, 2, 3, 4, 5]
