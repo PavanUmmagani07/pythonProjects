@@ -13,6 +13,12 @@ for i in range(1, len(N)):
     Result = Result+' '+N[i]
 print(Result)
 
+#FOR LOOP
+N = int(input())
+N = str(N)
+for i in N:
+    print(i,end=' ')
+
 #WhileLoop
 N = int(input())
 N = str(N)
